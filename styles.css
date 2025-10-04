@@ -1,170 +1,68 @@
-html, body {
-    margin: 0;
-    height: 100%;
-    background: moccasin;
+html, body { margin: 0px; height: 100%; background: moccasin; }
+body { display: flex; flex-wrap: wrap; justify-content: space-evenly; align-items: flex-start; padding: 0px 5vw; padding-top: 100px; }
+img { position: absolute; }
+a { position: absolute; }
+.desk-area { position: relative; width: 500px; height: 600px; }
+.bookshelf-area { position: relative; width: 400px; height: 600px; }
+.chess-area { position: relative; width: 600px; height: 600px; margin-left: -100px; }
+@media (max-width: 1200px) {
+  body { gap: 2vw; }
+}
+@media (max-width: 900px) {
+  body { gap: 0px; }
+}
+@media (max-width: 700px) {
+  body { flex-direction: column; padding: 0px; }
+  .chess-area { margin-top: 500px; }
+}
+.desk { top: 200px; transform: scale(1.05); }
+.desk-chair { transform: scale(0.8) scaleX(-1); top: 270px; left: 170px; }
+.website-poster-above-desk { top: -10px; left: 50px; transform: scale(0.5); }
+.frogs-on-desk { top: 90px; left: 100px; transform: scale(0.25); }
+.silver-lamp { left: 150px; top: 40px; transform: scale(0.9); }
+.face-plate { top: -60px; left: 185px; transform: scale(0.3); }
+.website-mobile { top: 300px; left: -70px; transform: scale(0.5); }
+.desk-computer { top: 120px; left: 0px; transform: scale(0.3); }
+.blue-chair { top: 220px; left: 0px; transform: scale(0.7); }
+.orange-chair { top: 220px; left: 250px; transform: scaleX(-1) scale(0.7); }
+.quilt { max-width: 250px; left: 300px; top: 80px; }
+.greentable { top: 230px; left: 120px; transform: scale(0.8); }
+.chess-set { top: 150px; left: 120px; transform: scale(0.35); }
+.orange-hanging-lamp { top: -100px; left: 100px; transform: scale(0.5); }
+.website-brown-poof { top: 370px; left: 180px; transform: scale(0.55); }
+.website-clown-poster { top: 0px; left: -20px; transform: scale(0.6); }
+.website-blue-vase { top: 235px; left: 310px; transform: scale(0.2); }
+.wood-stool { top: 320px; left: 310px; transform: scale(0.35); }
+.website-carpet-under-chess { top: 400px; left: 120px; transform: rotate(90deg) scale(1.7); }
+.striped-rug { top: 450px; left: 50px; transform: scale(2); }
+.pink-rug { top: 100px; left: 600px; }
+.library-lamp { top: 100px; left: 600px; }
+.library-step-ladder { top: 100px; left: 600px; }
+.pink-chair { top: 100px; left: 600px; }
+.website-pink-pillow { top: 300px; left: 100px; }
+.website-bookshelf { top: 50px; left: 0px; transform: scale(1.2); }
+.bookshelf-books-1 { top: -115px; left: 75px; transform: scale(0.18); }
+.bookshelf-books-2 { top: 10px; left: 30px; transform: scale(0.18); }
+.bookshelf-books-3 { top: -150px; left: 55px; transform: scale(0.18); }
+.bookshelf-books-4 { top: 100px; left: -235px; transform: scale(0.13); }
+.bookshelf-books-white { top: 250px; left: 110px; transform: scale(0.3); }
+.bookshelf-books-black-spine { top: 25px; left: -140px; transform: scale(0.2); }
+.bookshelf-books-orange-spine { top: 26px; left: -310px; transform: scale(0.22); }
+.bookshelf-books-nyrb { top: 75px; left: -190px; transform: scale(0.3); }
+
+
+a:hover img {
+  animation: shake 150ms 2 linear;
 }
 
-img {
-    position: absolute;
+@keyframes shake {
+  0% {
+    translate: 3px 0;
+  }
+  50% {
+    translate: -3px 0;
+  }
+  100% {
+    translate: 0 0;
+  }
 }
-
-/* Desk area */
-.desk {
-    top: 200px;
-    transform: scale(1.05);
-}
-
-.desk-chair {
-    transform: scale(0.8) scaleX(-1);
-    top: 270px;
-    left: 170px;
-}
-
-.website-poster-above-desk {
-    top: -10px;
-    left: 50px;
-    transform: scale(0.5);
-}
-
-.frogs-on-desk {
-    top: 90px;
-    left: 100px;
-    transform: scale(0.25);
-}
-
-.silver-lamp {
-    left: 150px;
-    top: 40px;
-    transform: scale(0.9);
-}
-
-.face-plate {
-    top: -60px;
-    left: 185px;
-    transform: scale(0.3);
-}
-
-.website-mobile {
-    top: 300px;
-    left: -70px;
-    transform: scale(0.5);
-}
-
-.desk-computer {
-    top: 50px;
-    left: -120px;
-    transform: scale(0.3);
-}
-
-
-/* Lounge area */
-
-.blue-chair {
-    top: 220px;
-    left: 400px;
-    transform: scale(0.7);
-}
-
-.orange-chair {
-    top: 220px;
-    left: 650px;
-    transform: scaleX(-1) scale(0.7);
-}
-
-.quilt {
-    max-width: 250px;
-    left: 700px;
-    top: 80px;
-}
-
-.greentable {
-    top: 230px;
-    left: 520px;
-    transform: scale(0.8);
-}
-
-.chess-set {
-    top: 150px;
-    left: 520px;
-    transform: scale(0.35);
-}
-
-
-.orange-hanging-lamp {
-    top: -100px;
-    left: 500px;
-    transform: scale(0.5);
-
-}
-
-.website-brown-poof {
-    top: 370px;
-    left: 580px;
-    transform: scale(0.55);
-}
-
-.website-clown-poster {
-    top: 000px;
-    left: 380px;
-    transform: scale(0.6);
-}
-
-.website-blue-vase {
-    top: 235px;
-    left: 710px;
-    transform: scale(0.2)
-}
-
-.wood-stool {
-    top: 320px;
-    left: 710px;
-    transform: scale(0.35);
-}
-
-/*rugs */
-
-.website-carpet-under-chess {
-    top: 400px;
-    left: 520px;
-    transform: rotate(90deg) scale(1.7);
-}
-
-.striped-rug {
-    top: 450px;
-    left: 50px;
-    transform: scale(2);
-}
-
-.pink-rug {
-    top: 100px;
-    left: 600px;
-}
-
-/*un used */
-
-.library-lamp {
-        top: 100px;
-    left: 600px;
-
-}
-
-.library-step-ladder {
-    top: 100px;
-    left: 600px;
-}
-
-.pink-chair {
-    top: 100px;
-    left: 600px;
-}
-
-.website-pink-pillow {
-    top: 300px;
-    left: 100px;
-}
-
-/*.website-bookshelf {
-    top: 600px;
-    left: 600px;
-}
-*/
