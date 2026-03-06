@@ -22,7 +22,7 @@ a { position: absolute; }
 .silver-lamp { left: 150px; top: 40px; transform: scale(0.9); }
 .face-plate { top: -60px; left: 185px; transform: scale(0.3); }
 .website-mobile { top: 300px; left: -70px; transform: scale(0.5); }
-.desk-computer { top: 120px; left: 0px; transform: scale(0.3); }
+.desk-computer { top: 120px; left: 0px; transform: scale(0.363); }
 .blue-chair { top: 220px; left: 0px; transform: scale(0.7); }
 .orange-chair { top: 220px; left: 250px; transform: scaleX(-1) scale(0.7); }
 .quilt { max-width: 250px; left: 300px; top: 80px; }
