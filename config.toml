@@ -1,0 +1,7 @@
+base_url = "https://xldenis.github.io/natasha"
+title = "tasha's corner"
+compile_sass = false
+build_search_index = false
+
+[markdown]
+highlight_code = false

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{% block title %}tasha's corner{% endblock %}</title>
+	<link rel="stylesheet" href="{{ get_url(path='styles.css') }}">
+	<meta property="og:title" content="{% block og_title %}tasha's corner{% endblock %}" />
+	<meta property="og:image" content="{{ get_url(path='website clown poster.png') }}" />
+</head>
+<body>
+{% block body %}{% endblock %}
+</body>
+</html>
