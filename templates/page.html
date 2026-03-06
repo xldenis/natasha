@@ -4,8 +4,14 @@
 {% block og_title %}tasha's corner - {{ page.title }}{% endblock %}
 
 {% block body %}
-<h1 class="books-title">{{ page.title }}</h1>
 <div class="books-area">
+{% for asset in page.assets | sort %}
+{% if asset is ending_with(".jpg") or asset is ending_with(".jpeg") or asset is ending_with(".png") or asset is ending_with(".JPEG") %}
+{% set image = resize_image(path=asset, width=800, quality=85, op="fit_width") %}
+<img src="{{ image.url }}" class="about-photo">
+{% endif %}
+{% endfor %}
+<br>
 {{ page.content | safe }}
 </div>
 {% endblock %}

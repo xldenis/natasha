@@ -43,6 +43,8 @@ a { position: absolute; }
 .books-title { width: 100%; text-align: center; flex-basis: 100%; }
 .books-area { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; max-width: 900px; margin: 0 auto; }
 .books-area img { position: static; max-width: 200px; height: auto; }
+.about-photo { max-width: 100% !important; }
+.books-area p { font-size: 1.25em; }
 .website-bookshelf { top: 50px; left: 0px; transform: scale(1.2); }
 .bookshelf-books-1 { top: -115px; left: 75px; transform: scale(0.18); }
 .bookshelf-books-2 { top: 10px; left: 30px; transform: scale(0.18); }
