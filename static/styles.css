@@ -1,18 +1,20 @@
 html, body { margin: 0px; height: 100%; background: moccasin; }
-body { display: flex; flex-wrap: wrap; justify-content: space-evenly; align-items: flex-start; padding: 0px 5vw; padding-top: 100px; }
+body { padding: 0px 5vw; padding-top: 100px; }
+.home { display: flex; flex-wrap: wrap; justify-content: space-evenly; align-items: flex-start; }
 img { position: absolute; }
 a { position: absolute; }
 .desk-area { position: relative; width: 500px; height: 600px; }
 .bookshelf-area { position: relative; width: 400px; height: 600px; }
 .chess-area { position: relative; width: 600px; height: 600px; margin-left: -100px; }
 @media (max-width: 1200px) {
-  body { gap: 2vw; }
+  .home { gap: 2vw; }
 }
 @media (max-width: 900px) {
-  body { gap: 0px; }
+  .home { gap: 0px; }
 }
 @media (max-width: 700px) {
-  body { flex-direction: column; padding: 0px; }
+  body { padding: 0px; }
+  .home { flex-direction: column; }
   .chess-area { margin-top: 500px; }
 }
 .desk { top: 200px; transform: scale(1.05); }
@@ -40,7 +42,7 @@ a { position: absolute; }
 .library-step-ladder { top: 100px; left: 600px; }
 .pink-chair { top: 100px; left: 600px; }
 .website-pink-pillow { top: 300px; left: 100px; }
-.books-title { width: 100%; text-align: center; flex-basis: 100%; }
+.books-title { text-align: center; }
 .books-area { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; max-width: 900px; margin: 0 auto; }
 .books-area img { position: static; max-width: 200px; height: auto; }
 .about-photo { max-width: 100% !important; }
