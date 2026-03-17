@@ -1,4 +1,4 @@
 +++
-title = "Knitting"
+title = "Knitting Projects"
 template = "gallery.html"
 +++
