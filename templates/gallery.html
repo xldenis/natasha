@@ -5,11 +5,11 @@
 
 {% block body %}
 <h1 class="books-title">{{ page.title }}</h1>
-<div class="books-area">
+<div class="gallery-area">
 {% set assets = page.assets %}
 {% for asset in assets | sort %}
-{% if asset is ending_with(".jpg") or asset is ending_with(".jpeg") or asset is ending_with(".png") %}
-{% set image = resize_image(path=asset, width=400, quality=85, op="fit_width") %}
+{% if asset is ending_with(".jpg") or asset is ending_with(".jpeg") or asset is ending_with(".JPEG") or asset is ending_with(".png") %}
+{% set image = resize_image(path=asset, width=600, height=600, quality=85, op="scale") %}
 <img src="{{ image.url }}" class="book-cover">
 {% endif %}
 {% endfor %}

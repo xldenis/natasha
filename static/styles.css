@@ -1,8 +1,8 @@
 html, body { margin: 0px; height: 100%; background: moccasin; }
 body { padding: 0px 5vw; padding-top: 100px; }
 .home { display: flex; flex-wrap: wrap; justify-content: space-evenly; align-items: flex-start; }
-img { position: absolute; }
-a { position: absolute; }
+.home img { position: absolute; }
+.home a { position: absolute; }
 .desk-area { position: relative; width: 500px; height: 600px; }
 .bookshelf-area { position: relative; width: 400px; height: 600px; }
 .chess-area { position: relative; width: 600px; height: 600px; margin-left: -100px; }
@@ -44,7 +44,9 @@ a { position: absolute; }
 .website-pink-pillow { top: 300px; left: 100px; }
 .books-title { text-align: center; }
 .books-area { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; max-width: 900px; margin: 0 auto; }
-.books-area img { position: static; max-width: 200px; height: auto; }
+.books-area img { max-width: 200px; }
+.gallery-area { columns: 3 200px; gap: 20px; max-width: 900px; margin: 0 auto; }
+.gallery-area img { display: block; max-width: 100%; margin-bottom: 20px; }
 .about-photo { max-width: 100% !important; }
 .books-area p { font-size: 1.25em; }
 .website-bookshelf { top: 50px; left: 0px; transform: scale(1.2); }
