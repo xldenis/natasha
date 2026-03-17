@@ -10,7 +10,7 @@
 <h1 class="books-title">Books I Read in {{ year.title }}</h1>
 <div class="books-area">
 {% for asset in year.assets | sort %}
-{% if asset is ending_with(".jpg") or asset is ending_with(".jpeg") or asset is ending_with(".png") %}
+{% if asset is ending_with(".jpg") or asset is ending_with(".JPEG") or asset is ending_with(".png") %}
 {% set image = resize_image(path=asset, width=400, quality=85, op="fit_width") %}
 <img src="{{ image.url }}" class="book-cover">
 {% endif %}
