@@ -5,40 +5,15 @@ body { padding: 0px 5vw; padding-top: 100px; }
 .home a { position: absolute; }
 .desk-area { position: relative; width: 500px; height: 600px; }
 .bookshelf-area { position: relative; width: 400px; height: 600px; }
-.chess-area { position: relative; width: 600px; height: 650px; margin-left: -50px; }
+.chess-area { position: relative; width: 600px; height: 650px; }
+@media (min-width: 1700px) {
+  .chess-area { margin-left: -50px; }
+}
 @media (max-width: 1200px) {
   .home { gap: 2vw; }
 }
 @media (max-width: 900px) {
   .home { gap: 0px; }
-}
-@media (max-width: 700px) {
-  html, body { overflow-x: hidden; }
-  body { padding: 0; padding-top: 20px; }
-  .home {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0;
-  }
-  .desk-area, .bookshelf-area, .chess-area {
-    transform-origin: top left;
-    margin: 0;
-  }
-  .desk-area {
-    width: 500px;
-    height: calc(600 * 100vw / 500);
-    transform: scale(calc(100vw / 500px));
-  }
-  .bookshelf-area {
-    width: 400px;
-    height: calc(525 * 100vw / 400);
-    transform: scale(calc(100vw / 400px));
-  }
-  .chess-area {
-    width: 600px;
-    height: calc(650 * 100vw / 600);
-    transform: scale(calc(100vw / 600px));
-  }
 }
 .desk { top: 200px; transform: scale(1.05); }
 .desk-chair { transform: scale(0.8) scaleX(-1); top: 270px; left: 170px; }
