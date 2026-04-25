@@ -5,7 +5,7 @@ body { padding: 0px 5vw; padding-top: 100px; }
 .home a { position: absolute; }
 .desk-area { position: relative; width: 500px; height: 600px; }
 .bookshelf-area { position: relative; width: 400px; height: 600px; }
-.chess-area { position: relative; width: 600px; height: 600px; margin-left: -100px; }
+.chess-area { position: relative; width: 600px; height: 650px; margin-left: -50px; }
 @media (max-width: 1200px) {
   .home { gap: 2vw; }
 }
@@ -13,9 +13,32 @@ body { padding: 0px 5vw; padding-top: 100px; }
   .home { gap: 0px; }
 }
 @media (max-width: 700px) {
-  body { padding: 0px; }
-  .home { flex-direction: column; }
-  .chess-area { margin-top: 500px; }
+  html, body { overflow-x: hidden; }
+  body { padding: 0; padding-top: 20px; }
+  .home {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+  .desk-area, .bookshelf-area, .chess-area {
+    transform-origin: top left;
+    margin: 0;
+  }
+  .desk-area {
+    width: 500px;
+    height: calc(600 * 100vw / 500);
+    transform: scale(calc(100vw / 500px));
+  }
+  .bookshelf-area {
+    width: 400px;
+    height: calc(525 * 100vw / 400);
+    transform: scale(calc(100vw / 400px));
+  }
+  .chess-area {
+    width: 600px;
+    height: calc(650 * 100vw / 600);
+    transform: scale(calc(100vw / 600px));
+  }
 }
 .desk { top: 200px; transform: scale(1.05); }
 .desk-chair { transform: scale(0.8) scaleX(-1); top: 270px; left: 170px; }
@@ -25,16 +48,17 @@ body { padding: 0px 5vw; padding-top: 100px; }
 .face-plate { top: -60px; left: 185px; transform: scale(0.3); }
 .website-mobile { top: 300px; left: -70px; transform: scale(0.5); }
 .desk-computer { top: 120px; left: 0px; transform: scale(0.363); }
-.blue-chair { top: 220px; left: 0px; transform: scale(0.7); }
-.orange-chair { top: 220px; left: 250px; transform: scaleX(-1) scale(0.7); }
-.quilt { max-width: 250px; left: 300px; top: 80px; }
-.greentable { top: 230px; left: 120px; transform: scale(0.8); }
-.chess-set { top: 150px; left: 120px; transform: scale(0.35); }
-.orange-hanging-lamp { top: -100px; left: 100px; transform: scale(0.5); }
-.website-brown-poof { top: 370px; left: 180px; transform: scale(0.55); }
-.website-clown-poster { top: 0px; left: -20px; transform: scale(0.6); }
-.website-blue-vase { top: 235px; left: 310px; transform: scale(0.2); }
-.wood-stool { top: 320px; left: 310px; transform: scale(0.35); }
+.chess-area img { transform-origin: top left; }
+.blue-chair { top: 273px; left: 3px; transform: scale(0.7); }
+.orange-chair { top: 273px; left: 498px; transform: scaleX(-1) scale(0.7); }
+.quilt { max-width: 250px; left: 250px; top: 80px; }
+.greentable { top: 265px; left: 105px; transform: scale(0.8); }
+.chess-set { top: 264px; left: 184px; transform: scale(0.35); }
+.orange-hanging-lamp { top: -13px; left: 138px; transform: scale(0.5); }
+.website-brown-poof { top: 449px; left: 209px; transform: scale(0.55); }
+.website-clown-poster { top: 70px; left: 0px; transform: scale(0.6); }
+.website-blue-vase { top: 375px; left: 400px; transform: scale(0.2); }
+.wood-stool { top: 434px; left: 374px; transform: scale(0.35); }
 .website-carpet-under-chess { top: 400px; left: 120px; transform: rotate(90deg) scale(1.7); }
 .striped-rug { top: 450px; left: 50px; transform: scale(2); }
 .pink-rug { top: 100px; left: 600px; }
@@ -49,15 +73,16 @@ body { padding: 0px 5vw; padding-top: 100px; }
 .gallery-area img { display: block; max-width: 100%; margin-bottom: 20px; }
 .about-photo { max-width: 100% !important; }
 .books-area p { font-size: 1.25em; }
-.website-bookshelf { top: 50px; left: 0px; transform: scale(1.2); }
-.bookshelf-books-1 { top: -115px; left: 75px; transform: scale(0.18); }
-.bookshelf-books-2 { top: 10px; left: 30px; transform: scale(0.18); }
-.bookshelf-books-3 { top: -150px; left: 55px; transform: scale(0.18); }
-.bookshelf-books-4 { top: 100px; left: -235px; transform: scale(0.13); }
-.bookshelf-books-white { top: 250px; left: 110px; transform: scale(0.3); }
-.bookshelf-books-black-spine { top: 25px; left: -140px; transform: scale(0.2); }
-.bookshelf-books-orange-spine { top: 26px; left: -310px; transform: scale(0.22); }
-.bookshelf-books-nyrb { top: 75px; left: -190px; transform: scale(0.3); }
+.bookshelf-area img { transform-origin: top left; }
+.website-bookshelf { top: 15px; left: 0px; transform: scale(1.2); }
+.bookshelf-books-1 { top: 56px; left: 245px; transform: scale(0.18); }
+.bookshelf-books-2 { top: 207px; left: 278px; transform: scale(0.18); }
+.bookshelf-books-3 { top: 44px; left: 306px; transform: scale(0.18); }
+.bookshelf-books-4 { top: 251px; left: 111px; transform: scale(0.13); }
+.bookshelf-books-white { top: 394px; left: 358px; transform: scale(0.3); }
+.bookshelf-books-black-spine { top: 148px; left: 219px; transform: scale(0.2); }
+.bookshelf-books-orange-spine { top: 149px; left: 34px; transform: scale(0.22); }
+.bookshelf-books-nyrb { top: 250px; left: 20px; transform: scale(0.3); }
 
 
 a:hover img {
